@@ -8,7 +8,7 @@ function App() {
 
   return (
     <StrictMode>
-      <Home />
+      <Home setNewUser={setNewUser}/>
       <Chat newUser={newUser} />
     </StrictMode>
   )
