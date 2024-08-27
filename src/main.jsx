@@ -1,12 +1,7 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { GlobalStyles } from './styles/GlobalStyles.js'
-import { RouterProvider } from 'react-router-dom'
-import router from './routes.jsx'
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <GlobalStyles />
-    <RouterProvider router={router} />
-  </StrictMode>
-)
+export default defineConfig({
+  base: '/nome-do-repositorio/', // Substitua pelo nome do seu repositório no GitHub
+  plugins: [react()],
+})
