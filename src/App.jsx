@@ -1,15 +1,17 @@
-import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
+import { StrictMode, useState } from 'react'
+import Chat from './salesforce/Chat/index';
+import Home from './pages/Home/index';
 
 function App() {
-    return (
-        <HashRouter>
-            <Routes>
-                <Route path="/" element={<Navigate to="/chat-retencao-pme" replace />} />
-                <Route path="/chat-retencao-pme" element={<Home />} />
-            </Routes>
-        </HashRouter>
-    );
+  // console.log("Novo usuário:", newUser);
+  const [newUser, setNewUser] = useState(null);
+
+  return (
+    <StrictMode>
+      <Home />
+      <Chat newUser={newUser} />
+    </StrictMode>
+  )
 }
 
-export default App;
+export default App

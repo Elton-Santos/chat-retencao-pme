@@ -2,7 +2,9 @@ import React, { useRef } from 'react';
 import { Container, Footer, Form, Header, Title, ContainerInputs, Input, InputLabel, ContainerForm } from './styles.js';
 import { Button } from '../../components/Button/index.js';
 
-function Home() { 
+function Home() {
+    
+    const [newUser, setNewUser] = useState(null);
 
     // Referências para os inputs
     const inputLogin = useRef();
