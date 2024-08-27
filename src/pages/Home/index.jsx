@@ -4,7 +4,7 @@ import { Button } from '../../components/Button/index.js';
 
 function Home() {
     
-    const [newUser, setNewUser] = useState(null);
+    // const [newUser, setNewUser] = useState(null);
 
     // Referências para os inputs
     const inputLogin = useRef();
