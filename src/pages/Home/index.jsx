@@ -1,12 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { Container, Footer, Form, Header, Title, ContainerInputs, Input, InputLabel, ContainerForm } from './styles.js';
 import { Button } from '../../components/Button/index.js';
 
 function Home() {
     
-    // const [newUser, setNewUser] = useState(null);
-
-    // Referências para os inputs
+    let [newUser, setNewUser] = useState(null);
+ 
     const inputLogin = useRef();
     const inputEmail = useRef();
     const inputRazaoSocial = useRef();
@@ -15,8 +14,7 @@ function Home() {
     const inputTelefone = useRef();
 
     function registerNewUser() {
-        
-        // Cria o objeto newUser com os valores dos inputs
+         
         newUser = {
             login: inputLogin.current.value,
             email: inputEmail.current.value,
@@ -24,11 +22,8 @@ function Home() {
             numeroContrato: inputNumeroContrato.current.value,
             contato: inputContato.current.value,
             telefone: inputTelefone.current.value,
-        };
-
-        // Passa o novo usuário para o componente pai
-        setNewUser(newUser);
-        console.log('registerNewUser:', newUser); // Log para depuração
+        }; 
+        setNewUser(newUser); 
     }
 
     return (

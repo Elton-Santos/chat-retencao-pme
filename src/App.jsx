@@ -3,12 +3,12 @@ import Chat from './salesforce/Chat/index';
 import Home from './pages/Home/index';
 
 function App() {
-  // console.log("Novo usuário:", newUser);
-  const [newUser, setNewUser] = useState(null);
-
+  const [newUser, setNewUser] = useState([]);
+  console.log("Novo usuário:", newUser);
+  
   return (
     <StrictMode>
-      <Home />
+      <Home setNewUser={setNewUser}/>
       <Chat newUser={newUser} />
     </StrictMode>
   )

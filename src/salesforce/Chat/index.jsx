@@ -2,7 +2,7 @@ import React from 'react';
 
 function Chat({ newUser }) {
     
-  console.log("Novo usuário App: ", newUser); 
+  console.log("Chat: ", newUser); 
   
     return (
         <div>
